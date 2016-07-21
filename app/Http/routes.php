@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::auth();
 
-Route::get('/', 'PostsController@index');
+Route::resource('posts', 'PostsController');
+Route::get('/','PostsController@index');
